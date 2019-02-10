@@ -1,3 +1,9 @@
-<p>  
+
   <a routerLink="/"><button class="btn btn-success pull-right" > Today's Weather Here</button></a>
-</p>
+  <div *ngIf="isLoading">waiting for weather info...</div>
+  <div *ngIf="!isLoading"> Forecast is...
+    <ul>
+      <li *ngFor="let forecast of forecasts">Date is: {{forecast.Date}} temp is: {{forecast.Temp}}</li>      
+    </ul>
+  </div>
+

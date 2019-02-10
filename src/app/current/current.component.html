@@ -1,3 +1,5 @@
-<p>
+
   <a routerLink="/forecast"><button class="btn btn-success pull-right" > 5-day Forecast Here</button></a>
-</p>
+  <div *ngIf="isLoading">waiting for weather info...</div>
+  <div *ngIf="!isLoading"> current temp is {{currentTemp}}</div>
+
