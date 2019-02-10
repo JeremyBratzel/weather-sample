@@ -1,0 +1,19 @@
+.center{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.navigation{
+    font-size: 20pt;
+}
+
+.loadingFailed {
+    background-color: crimson;
+    font-size: 26pt;
+}
+
+h1{
+    text-align: center;
+    color: darkcyan;
+}

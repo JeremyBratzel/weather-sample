@@ -1,5 +1,11 @@
-
-  <a routerLink="/forecast"><button class="btn btn-success pull-right" > 5-day Forecast Here</button></a>
+<div class="center">
+  <h1>Current Day Forecast</h1>
+  <span  class="navigation">
+    To see the five day forecast click <a routerLink="/forecast">Here</a>.
+  </span>
+  <div *ngIf="loadingFailed" class="loadingFailed">error retrieving data. Please reload and try again</div>
   <div *ngIf="isLoading">waiting for weather info...</div>
-  <div *ngIf="!isLoading"> current temp is {{currentTemp}}</div>
-
+  <div *ngIf="!isLoading"> 
+    <app-weather [forecast]="forecast"></app-weather>
+  </div>
+</div>

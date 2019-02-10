@@ -12,7 +12,7 @@ export class WeatherService {
   apiEndPoint = 'http://localhost:3000';
   constructor(private http: HttpClient) { }
 
-  getCurrent(location: Location): Observable<number> {
+  getCurrent(location: Location): Observable<any> {
     // tslint:disable-next-line:max-line-length
     return this.http.get<any[]>(this.apiEndPoint + '/current/?lat=' + location.Lat + '&lon=' + location.Lon, { }).pipe(map((response: any) => response));
   }

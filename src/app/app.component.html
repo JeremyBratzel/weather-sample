@@ -2,11 +2,10 @@
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
-    <p *ngIf="locationFailed">Couldn't retrieve current location</p>
-    <p *ngIf="location">
-      Latitiude {{location.Lat}}
-      Longitude {{location.Lon}}
-  </p>
   </h1>
+    <p class="locationFailed" *ngIf="locationFailed">Couldn't retrieve current location
+    <br/>
+      Click <a href="https://support.google.com/chrome/answer/114662?co=GENIE.Platform%3DDesktop&hl=en" target="_blank">here</a> to see how to change your location permissions.
+    </p>
 </div>
 <router-outlet></router-outlet>

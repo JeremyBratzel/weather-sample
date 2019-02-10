@@ -20,17 +20,15 @@ export class ForecastComponent implements OnInit {
     this.locationService.getLocation().subscribe(success => {
       this.weatherService.getForecast(new Location(success.coords.latitude, success.coords.longitude)).subscribe(
         forecast => {
-          this.forecasts = forecast.map(pair => new Forecast(pair.date, pair.temp));
+          this.forecasts = forecast.map(pair => new Forecast(pair.date, pair.temp, pair.icon));
           this.isLoading = false;
         },
         error => {
-          console.log(error);
           this.loadingFailed = true;
         }
       );
     },
     error => this.loadingFailed = true
     );
-
   }
 }
