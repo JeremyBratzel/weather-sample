@@ -1,6 +1,6 @@
 # Weather-sample
 
-This is a Angular 7 based frontend to consume the node.js based weather-api and the .Net Core based weather-dotnetcore-api. Follow the steps below to run this locally and also run one of the middleware projects locally to try them out together.
+This is an Angular 7 based frontend to consume the node.js based weather-api and the .Net Core based weather-dotnetcore-api. Follow the steps below to run this locally and also run one of the middleware projects locally to try them out together.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 
